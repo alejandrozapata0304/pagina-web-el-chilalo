@@ -1,0 +1,104 @@
+/*General*/
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/*Barra de navegacion*/
+
+header{
+    background-color: #ef7a15 ;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .logo{
+    display: flex;
+    margin: 0;
+    padding: 20px 35px;
+    font-weight: bold;
+    color:aliceblue;
+    font-size: 2em;
+}
+
+img{
+    margin: 10px;
+    height: 50px;
+}
+
+header .contenedor{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .nav{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 25px;
+    text-align: right;
+}
+
+header a{
+    padding: 5px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: #f0dac6;
+}
+
+/*Seccion de intro a productos*/
+
+.seccion-pro-intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/fondo_principal.jpg");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+}
+.seccion-pro-intro h1{
+    color: #ffffff;
+}
+@media (min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+}
+
+section {
+    padding: 20px;
+}

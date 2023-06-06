@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1{
+    font-size: 3.5em;
+}
+
+h2{
+    font-size: 2.5em;
+}
+h3{
+    font-size: 2em;
+}
+p{
+    font-size: 1.25em;
+}
+ul{
+    list-style: none;
+}
+
+li{
+    font-size: 1.25em;
+}
+
+button {
+    font-size: 1.50em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 5);
+    color: white;
+    background-color: #ef7a15;
+}
+
+
+button:hover { 
+    background-color: #a34e04;
+}
+
+.contenedor {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items:center;
+}
+
+.color-acento{
+    color: #ef7a15;
+}
+
+/*Barra de navegación*/
+header{
+    background-color: #ef7a15 ;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .logo{
+    display: flex;
+    margin: 0;
+    padding: 20px 35px;
+    font-weight: bold;
+    color:aliceblue;
+    font-size: 2em;
+}
+
+img{
+    margin: 10px;
+    height: 50px;
+}
+
+header .contenedor{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .nav{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 25px;
+    text-align: right;
+}
+
+header a{
+    padding: 5px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: #ffffff;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../media/fondo1.0.jpg");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+#hero h1{
+    color: rgb(255, 255, 255);
+}
+
+.mover{
+    text-align: left;    
+}
+
+#hero button{
+    font-size: 1.75em;
+}
+
+#Inicio .contenedor{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px 12px;
+}
+
+#Inicio h2{
+    text-align: center;
+    padding: 20px 12px;
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#Inicio .p{
+    display: none;
+}
+
+#Inicio .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Inicio .img-contenedor{
+    background-image: url("../media/servicios1.0.jpeg");
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 400px; 
+}
+
+.ofertas-titulo{
+    text-align: center;
+}
+
+#Inicio .lista{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 50px;
+    border-radius: 15px;
+}
+
+#Inicio h3{
+    margin-top: 0;
+}
+
+.lista:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/promo.jpg");
+}
+
+
+.lista:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/promo.jpg");
+}
+
+.lista:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/promo.jpg");
+}
+@media (min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+}
