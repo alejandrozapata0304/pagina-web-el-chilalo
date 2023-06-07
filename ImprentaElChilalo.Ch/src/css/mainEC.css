@@ -40,6 +40,8 @@ button {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 5);
     color: white;
     background-color: #ef7a15;
+    margin-top: 400px;
+    left: 200px;
 }
 
 
@@ -63,17 +65,21 @@ header{
     background-color: #ef7a15 ;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0px;
 }
-
-header .logo{
+/**/
+header .logo {
     display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Opcional, para centrar verticalmente */
     margin: 0;
     padding: 20px 35px;
     font-weight: bold;
-    color:aliceblue;
+    color: aliceblue;
     font-size: 2em;
 }
+
+
 
 img{
     margin: 10px;
@@ -129,8 +135,23 @@ header a:hover{
     color: rgb(255, 255, 255);
 }
 
-.mover{
-    text-align: left;    
+.mover {
+    position: absolute;
+    top: 170px;
+    left: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s linear forwards;
+    text-align: left;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 #hero button{
@@ -166,7 +187,7 @@ header a:hover{
 }
 
 #Inicio .img-contenedor{
-    background-image: url("../media/servicios1.0.jpeg");
+    background-image: url("../media/img.inicio.jpg");
     background-size: cover;
     background-position: center center;
     height: 500px;
