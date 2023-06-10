@@ -9,6 +9,15 @@ scroll-behavior: smooth;
 body{
     font-family: 'Playfair Display', serif;
     margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../media/fondo1.0.jpg);
+
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
 }
 
 .content{
@@ -62,17 +71,6 @@ button:hover span{
 
 button:hover {
     border: none;
-}
-
-.banner {
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../media/fondo1.0.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #ffffff;
 }
 
 .navbar{
