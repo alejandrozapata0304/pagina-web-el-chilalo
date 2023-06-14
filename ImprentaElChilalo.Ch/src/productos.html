@@ -39,73 +39,31 @@
         </div>
     </div>
 
-    <section>
+    <section class="contenido">
         <div class="mostrador" id="mostrador">
             <div class="fila">
-                <div class="item">
+                <div class="item" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="media/Promo.jpg" alt="">
                         <p class="descripcion">Promocion 1</p>
                         <span class="precios">S/. 100</span>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="media/Promo.jpg" alt="">
                         <p class="descripcion">Promocion 1</p>
                         <span class="precios">S/. 100</span>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="media/Promo.jpg" alt="">
                         <p class="descripcion">Promocion 1</p>
                         <span class="precios">S/. 100</span>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="contenedor-foto">
-                        <img src="media/Promo.jpg" alt="">
-                        <p class="descripcion">Promocion 1</p>
-                        <span class="precios">S/. 100</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="contenedor-foto">
-                        <img src="media/Promo.jpg" alt="">
-                        <p class="descripcion">Promocion 1</p>
-                        <span class="precios">S/. 100</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="contenedor-foto">
-                        <img src="media/Promo.jpg" alt="">
-                        <p class="descripcion">Promocion 1</p>
-                        <span class="precios">S/. 100</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="contenedor-foto">
-                        <img src="media/Promo.jpg" alt="">
-                        <p class="descripcion">Promocion 1</p>
-                        <span class="precios">S/. 100</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="contenedor-foto">
-                        <img src="media/Promo.jpg" alt="">
-                        <p class="descripcion">Promocion 1</p>
-                        <span class="precios">S/. 100</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="contenedor-foto">
-                        <img src="media/Promo.jpg" alt="">
-                        <p class="descripcion">Promocion 1</p>
-                        <span class="precios">S/. 100</span>
-                    </div>
-                </div>
-                <div class="item">
+                <div class="item" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="media/Promo.jpg" alt="">
                         <p class="descripcion">Promocion 1</p>
@@ -113,36 +71,65 @@
                     </div>
                 </div>
             </div>
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="media/Promo.jpg" alt="">
+                        <p class="descripcion">Promocion 5</p>
+                        <span class="precios">S/. 100</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="media/Promo.jpg" alt="">
+                        <p class="descripcion">Promocion 6</p>
+                        <span class="precios">S/. 100</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="media/Promo.jpg" alt="">
+                        <p class="descripcion">Promocion 7</p>
+                        <span class="precios">S/. 100</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="media/Promo.jpg" alt="">
+                        <p class="descripcion">Promocion 8</p>
+                        <span class="precios">S/. 100</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Contenedor del item seleccionado-->
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+                &#x2715
+            </div>
+            <div class="info">
+                <img src="media/Promo.jpg" alt="" id="img">
+                <h2 id="modelo">Promocion 1</h2>
+                <p id="descripcion">Descripcion Promo 1</p>
+
+                <span class="precio" id="precio">S/1300</span>
+
+                <div class="fila">
+                    <div class="size">
+                        <label for="">SIZE</label>
+                        <select name="" id="">
+                            <option value="">HP</option>
+                            <option value="">Epson</option>
+                            <option value="">Brother</option>
+                            <option value="">Bosch</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    
-    <!--Slider-->
-    <!--div class="slider--inner">
-        <img src="media/servicios1.0.jpeg" alt="">
-        <img src="media/servicios2.0.jpeg" alt="">
-        <img src="media/servicios3.0.jpeg" alt="">
-    </div-->
 
-    <!--Catálogo de productos.-->
-    <!--div class="container">
-        <div class="caja caja1">
-            <h1>1</h1>
-        </div>
-        <div class="caja caja2">
-            <h1>2</h1>
-        </div>
-        <div class="caja caja3">
-            <h1>3</h1>
-        </div>
-        <div class="caja caja4">
-            <h1>4</h1>
-        </div>
-        <div class="caja caja5">
-            <h1>5</h1>
-        </div>
-        <div class="caja caja6">
-            <h1>6</h1>
-        </div>
-    </div-->
+    <script src="js/productos.js"></script>
 </body>
 </html>
