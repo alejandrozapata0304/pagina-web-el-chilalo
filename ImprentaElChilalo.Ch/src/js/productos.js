@@ -11,9 +11,9 @@ function cargar(item){
     mostrador.style.width = "60%";
     seleccion.style.width = "40%";
     seleccion.style.opacity = "1";
-    item.style.border = "2p px solid red";
+    item.style.border = "2px solid red";
 
-    imgSeleccionada.scr = item.getElementById("img")[0].scr;
+    imgSeleccionada.src = item.getElementById("img")[0].src;
 
     modeloSeleccionado.innerHTML = item.getElementsByTagName("p")[0].innerHTML;
 
