@@ -13,7 +13,7 @@ function cargar(item){
     seleccion.style.opacity = "1";
     item.style.border = "2px solid red";
 
-    imgSeleccionada.src = item.getElementById("img")[0].src;
+    imgSeleccionada.src = item.getElementsByTagName("img")[0].src;
 
     modeloSeleccionado.innerHTML = item.getElementsByTagName("p")[0].innerHTML;
 
