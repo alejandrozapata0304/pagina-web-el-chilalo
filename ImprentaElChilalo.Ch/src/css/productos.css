@@ -143,8 +143,8 @@ body{
 }
 .cerrar{
     position: absolute;
-    right: 0;
-    top: 20px;
+    right: 20px;
+    top: 15px;
     cursor: pointer;
 }
 .info{
