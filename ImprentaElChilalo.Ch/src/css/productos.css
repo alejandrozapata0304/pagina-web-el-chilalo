@@ -11,7 +11,7 @@ body{
     font-family: 'Playfair Display', serif;
     margin: 0;
     
-
+    background-color: rgb(0, 0, 0);
 }
 .superior{
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../media/fondo1.0.jpg);
@@ -88,6 +88,11 @@ body{
     font-weight: 100;
     line-height: 25px;
 }
+/*Banners*/
+.banner-productos{
+    color: #fff;
+    margin-left: 135px;
+}
 /*Productos filas*/
 .contenido{
     max-width: 1100px;
@@ -113,6 +118,8 @@ body{
     cursor: pointer;
     border-radius: 5px;
     transition: .3s;
+
+    background-color: #ffffff;
 }
 .mostrador .fila .item:hover{
     background-color: #e6e6e6;
@@ -135,11 +142,15 @@ body{
     opacity: 0;
     width: 0%;
     border: 1px solid #CCC;
+    border-radius: 5px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    margin-left: 10px;
+
+    background-color: #ffffff;
 }
 .cerrar{
     position: absolute;
