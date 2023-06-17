@@ -23,6 +23,7 @@ body{
     background-size: cover;
     color: #ffffff;
 }
+
 /*Estilo del navegador*/
 .navbar{
     width: 100%;
@@ -70,7 +71,25 @@ body{
 }
 
 /*Estilo servicios*/
+.titulo{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
 
+.titulo h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.titulo p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
 #nuestros-servicios{
     background-color: rgb(255, 252, 250);
     color: rgb(0, 0, 0);
