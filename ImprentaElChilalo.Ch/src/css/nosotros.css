@@ -1,104 +1,122 @@
 /*General*/
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', serif;
     margin: 0;
+    
+    background-color: rgb(0, 0, 0);
+}
+.superior{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../media/fondo1.0.jpg);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
 }
 
 /*Barra de navegacion*/
-
-header{
-    background-color: #ef7a15 ;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-header .logo{
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: -20px 5px;
     display: flex;
-    margin: 0;
-    padding: 20px 35px;
-    font-weight: bold;
-    color:aliceblue;
-    font-size: 2em;
-}
-
-img{
-    margin: 10px;
-    height: 50px;
-}
-
-header .contenedor{
-    display: flex;
-    flex-direction:row;
     align-items: center;
     justify-content: space-between;
-}
-
-header .nav{
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 25px;
-    text-align: right;
-}
-
-header a{
-    padding: 5px 15px;
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-}
-
-header a:hover{
-    color: #f0dac6;
-}
-
-/*Seccion de intro a productos*/
-
-.seccion-pro-intro{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height: 90vh;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("imagenes/fondo_principal.jpg");
     
-    background-repeat: no-repeat;
+}
+
+.logo{
+    width: 150px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+    font-family: 'Kanit', sans-serif;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ef7a15;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+/*Seccion contacto*/
+
+.titulo-contacto {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.titulo-contacto h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+#Nosotros .contenedor{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 500px 12px;
+}
+
+#Nosotros h2{
+    text-align: center;
+    padding: 20px 12px;
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#Nosotros .p{
+    display: none;
+}
+
+#Nosotros .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Nosotros .img-contenedor{
+    background-image: url("img/promo.jpg");
     background-size: cover;
-    background-position: center ;
-}
-.seccion-pro-intro h1{
-    color: #ffffff;
-}
-@media (min-width: 720px){
-    header{
-        position: fixed;
-        width: 100%;
-    }
-
-    header .container{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    header nav{
-        flex-direction: row;
-        padding-bottom: 0;
-        padding-right: 20px;
-    }
-}
-
-section {
-    padding: 20px;
+    background-position: center center;
+    height: 500px;
+    width: 400px; 
 }
