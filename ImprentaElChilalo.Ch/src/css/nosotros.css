@@ -89,7 +89,7 @@ body{
 
 /*Texto de inicio*/
 .superior{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../media/fondo1.0.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../media/home.jpeg);
     height: 100vh;
     align-items: center;
     justify-content: center;
@@ -98,9 +98,7 @@ body{
     background-size: cover;
     color: #ffffff;
 }
-
 /*Seccion contacto*/
-
 .titulo-contacto {
     width: 100%;
     position: absolute;
@@ -109,31 +107,38 @@ body{
     text-align: center;
     color: #fff;
 }
-
 .titulo-contacto h1{
     font-size: 70px;
     margin-top: 80px;
 }
 
-#Nosotros .contenedor{
+/*Data*/
+#nosotros .contenedor{
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    padding: 500px 12px;
+    padding: 50px 12px;
 }
 
-#Nosotros h2{
+#nosotros h2{
     text-align: center;
     padding: 20px 12px;
     margin-top: 0;
-    font-size: 3.2em;
+    font-size: 4em;
 }
 
-#Nosotros .p{
+#nosotros .p{
     display: none;
 }
 
-#Nosotros .texto{
+#nosotros .texto p{
+    font-size: 1.5em;
+}
+#nosotros .texto address{
+    font-size: 1.5em;
+}
+
+#nosotros .texto{
     width: 50%;
     max-width: 600px;
     text-align: initial;
@@ -141,9 +146,11 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    color: #fff;
 }
 
-#Nosotros .img-contenedor{
+#nosotros .img-contenedor{
     background-image: url("img/promo.jpg");
     background-size: cover;
     background-position: center center;
