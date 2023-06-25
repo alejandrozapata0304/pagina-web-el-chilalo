@@ -32,6 +32,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    /*nav-bar en primer plano*/
+    z-index: 1;
     
 }
 

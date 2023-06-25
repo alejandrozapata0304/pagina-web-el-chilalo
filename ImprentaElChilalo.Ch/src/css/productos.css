@@ -28,6 +28,9 @@ body{
     top: 0;
 
     transition: all 0.5s ease;
+
+    /*nav-bar en primer plano*/
+    z-index: 1;
 }
 /*Atributos el navbar sea deslizado*/
 @keyframes fadein {
