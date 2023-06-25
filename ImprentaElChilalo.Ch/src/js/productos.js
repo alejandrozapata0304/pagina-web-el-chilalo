@@ -65,3 +65,7 @@ window.addEventListener('scroll', function() {
 });
 
 //Scroll reveal
+ScrollReveal().reveal('.navbar');
+ScrollReveal().reveal('.intro-pro');
+ScrollReveal().reveal('.banner-productos');
+ScrollReveal().reveal('.fila');
