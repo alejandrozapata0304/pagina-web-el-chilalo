@@ -12,7 +12,7 @@ function cargar(item){
     mostrador.style.width = "60%";
     seleccion.style.width = "40%";
     seleccion.style.opacity = "1";
-    item.style.border = "2px solid red";
+    item.style.border = "3px solid #e7705b";
 
     imgSeleccionada.src = item.getElementsByTagName("img")[0].src;
 
@@ -28,12 +28,27 @@ function quitarBordes(){
         items[i].style.border = "none";
     }
 }
-
+//Cierra el div max. y cierra los estilos anteriores
 function cerrar(){
     mostrador.style.width = "100%";
     seleccion.style.width = "0";
     seleccion.style.opacity = "0";
-    quitarBordes()
+    quitarBordes();
+    var items = document.querySelectorAll('.mostrador .fila .item');
+    for (var i = 0; i < items.length; i++) {
+        items[i].classList.remove('active');
+    }
+}
+
+//Afectar estilos de los banners de productos al hacerles click
+var items = document.querySelectorAll('.mostrador .fila .item');
+for (var i = 0; i < items.length; i++) {
+    items[i].addEventListener('click', function() {
+        for (var j = 0; j < items.length; j++) {
+            items[j].classList.remove('active');
+        }
+        this.classList.add('active');
+    });
 }
 
 //Para cambiar efectos del navegador(background, letras de enlaces e imagen).

@@ -153,10 +153,17 @@ body{
     transition: .3s;
 
     background-color: #ffffff;
+    transition: transform 0.5s ease;
 }
 .mostrador .fila .item:hover{
     background-color: #e6e6e6;
 }
+.mostrador .fila .item.active {
+    /* Agrega aquí los estilos para el estado activo del elemento .item */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
 .mostrador .fila .item img{
     width: 100%;
     margin: 30px 0;
@@ -169,6 +176,7 @@ body{
     color: #f14e32;
     font-weight: bold;
     font-size: 20px;
+    font-family: 'Kanit', sans-serif;
 }
 .seleccion{
     transition: .5s ease;
@@ -211,6 +219,7 @@ body{
 .info .precio{
     font-size: 30px;
     font-weight: bold;
+    font-family: 'Kanit', sans-serif;
     color: #f14e32;
     margin-bottom: 10px;
     display: block;
