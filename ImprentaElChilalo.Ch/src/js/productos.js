@@ -63,3 +63,5 @@ window.addEventListener('scroll', function() {
         logo.src = 'media/Logo con letra blanca (1).png';
     }
 });
+
+//Scroll reveal
