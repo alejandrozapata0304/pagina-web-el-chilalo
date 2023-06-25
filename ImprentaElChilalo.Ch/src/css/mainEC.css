@@ -95,6 +95,10 @@ button:hover {
     height: 100%;
     cursor: pointer;
 }
+.logo-link {
+    border: none !important;
+}
+
 
 .navbar ul li{
     list-style: none;
