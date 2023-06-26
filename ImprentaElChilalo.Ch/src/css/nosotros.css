@@ -179,7 +179,6 @@ body{
 }
 
 #nosotros .img-contenedor{
-    background-image: url("img/promo.jpg");
     background-size: cover;
     background-position: center center;
     height: 500px;
