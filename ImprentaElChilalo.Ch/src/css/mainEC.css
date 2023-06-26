@@ -38,6 +38,26 @@ body{
     font-weight: 100;
     line-height: 25px;
 }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.fade-in {
+    animation: fadeIn 3s;
+}
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+.fade-in-left{
+    animation: fadeInLeft 2s;
+}
 
 button {
     width: 200px;

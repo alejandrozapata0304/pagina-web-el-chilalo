@@ -1,11 +1,9 @@
 /*Estilo general*/
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html{
     scroll-behavior: smooth;
 }
@@ -105,15 +103,25 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
+
+  position: relative;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in {
+  animation: fadeIn 2s;
+  top: 0;
 }
 
-/*Seccion servicios*/
 
+
+/*Seccion servicios*/
 .titulo{
     width: 100%;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 30%;
     text-align: center;
     color: #fff;
 }
@@ -121,6 +129,20 @@ body{
 .titulo h1{
     font-size: 70px;
     margin-top: 80px;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.fade-in-left{
+    animation: fadeInLeft 2s;
+  
 }
 
 /*.titulo p{

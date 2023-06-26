@@ -66,6 +66,8 @@ window.addEventListener('scroll', function() {
 
 //Scroll reveal
 ScrollReveal().reveal('.navbar');
-ScrollReveal().reveal('.intro-pro');
+//ScrollReveal().reveal('.intro-pro');
 ScrollReveal().reveal('.banner-productos');
 ScrollReveal().reveal('.fila');
+
+//Efectos de fade-in y fade-in-left

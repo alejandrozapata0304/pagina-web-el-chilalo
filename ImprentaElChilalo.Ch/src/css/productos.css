@@ -106,7 +106,29 @@ body{
     background-size: cover;
     color: #ffffff;
 }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.fade-in {
+    animation: fadeIn 2s;
+}
+
+  
 /*Seccion de intro a productos*/
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+.fade-in-left {
+    animation: fadeInLeft 2s;
+}
 
 .intro-pro{
     width: 100%;
@@ -116,6 +138,7 @@ body{
     text-align: center;
     color: #fff;
 }
+
 .intro-pro h1{
     font-size: 70px;
     margin-top: 80px;
