@@ -174,7 +174,7 @@ body{
 .mostrador .fila .item{
     max-width: 210px;
     padding: 30px;
-    height: 250px;
+    height: 350px;
     text-align: center;
     margin: 0 10px;
     cursor: pointer;
