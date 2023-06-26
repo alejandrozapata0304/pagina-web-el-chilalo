@@ -70,4 +70,9 @@ ScrollReveal().reveal('.navbar');
 ScrollReveal().reveal('.banner-productos');
 ScrollReveal().reveal('.fila');
 
+//Para mejor refresco de la página
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
 //Efectos de fade-in y fade-in-left
