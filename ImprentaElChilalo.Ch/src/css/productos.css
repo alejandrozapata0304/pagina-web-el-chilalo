@@ -11,18 +11,9 @@ body{
     font-family: 'Playfair Display', serif;
     margin: 0;
     
-    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(rgba(0,7,0,1) 0%, rgba(6,6,6,1) 43%, rgba(30,25,18,1) 79%, rgba(71,66,59,1) 100%, rgba(200,200,200,1) 100%);
 }
-.superior{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../media/fondo1.0.jpg);
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #ffffff;
-}
+
 
 /*Barra de navegacion*/
 .navbar{
@@ -32,13 +23,43 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
+    position: fixed;
+    top: 0;
+
+    transition: all 0.5s ease;
+
+    /*nav-bar en primer plano*/
+    z-index: 1;
+}
+/*Atributos el navbar sea deslizado*/
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.navbar.scrolled {
+    background: rgb(255,244,231);
+    background: linear-gradient(90deg, rgba(255,244,231,1) 0%, rgba(255,214,182,1) 50%, rgba(255,244,231,1) 100%);
+
+    animation: fadein 1s;
+}
+.navbar.scrolled ul li a {
+    color: black;
 }
 
+
 .logo{
-    width: 150px;
+    width: 100px;
     height: 100%;
     cursor: pointer;
+
+   
+    margin: 10px 20px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.logo:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 
 .navbar ul li{
@@ -48,12 +69,17 @@ body{
     position: relative;
 
     font-family: 'Kanit', sans-serif;
-    
+    font-size: 17px;
+    font-weight: italic;
 }
 .navbar ul li a{
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
+
+    transition: all 0.3s ease;
+
+    margin: 10px 10px;
 }
 .navbar ul li::after{
     content: '';
@@ -69,7 +95,40 @@ body{
     width: 100%;
 }
 
+/*Texto de main de bienvenida*/
+.superior{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../media/fondo1.0.jpg);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.fade-in {
+    animation: fadeIn 2s;
+}
+
+  
 /*Seccion de intro a productos*/
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+.fade-in-left {
+    animation: fadeInLeft 2s;
+}
 
 .intro-pro{
     width: 100%;
@@ -79,6 +138,7 @@ body{
     text-align: center;
     color: #fff;
 }
+
 .intro-pro h1{
     font-size: 70px;
     margin-top: 80px;
@@ -88,10 +148,12 @@ body{
     font-weight: 100;
     line-height: 25px;
 }
+
 /*Banners*/
 .banner-productos{
     color: #fff;
     margin-left: 135px;
+    margin-top: 50px;
 }
 /*Productos filas*/
 .contenido{
@@ -112,7 +174,7 @@ body{
 .mostrador .fila .item{
     max-width: 210px;
     padding: 30px;
-    height: 250px;
+    height: 350px;
     text-align: center;
     margin: 0 10px;
     cursor: pointer;
@@ -120,10 +182,17 @@ body{
     transition: .3s;
 
     background-color: #ffffff;
+    transition: transform 0.5s ease;
 }
 .mostrador .fila .item:hover{
     background-color: #e6e6e6;
 }
+.mostrador .fila .item.active {
+    /* Agrega aquí los estilos para el estado activo del elemento .item */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
 .mostrador .fila .item img{
     width: 100%;
     margin: 30px 0;
@@ -136,6 +205,7 @@ body{
     color: #f14e32;
     font-weight: bold;
     font-size: 20px;
+    font-family: 'Kanit', sans-serif;
 }
 .seleccion{
     transition: .5s ease;
@@ -178,6 +248,7 @@ body{
 .info .precio{
     font-size: 30px;
     font-weight: bold;
+    font-family: 'Kanit', sans-serif;
     color: #f14e32;
     margin-bottom: 10px;
     display: block;
