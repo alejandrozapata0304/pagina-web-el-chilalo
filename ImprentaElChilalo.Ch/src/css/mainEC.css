@@ -154,3 +154,63 @@ button:hover {
 .navbar ul li:hover::after{
     width: 100%;
 }
+
+footer {
+    background: linear-gradient(to right, #ff8a00, #e52e71);
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .social-icons {
+    text-align: center;
+  }
+  
+  .social-icon {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+  .social-icon:not(:last-child)::after {
+    content: "|";
+    margin: 0 10px;
+  }
+  
+  .logo img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .text {
+    text-align: center;
+  }
+  
+  .text p {
+    line-height: 0.5;
+  }
+
+  /* Estilos para las animaciones de los iconos de redes sociales */
+  .social-icons {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-icons:hover {
+    transform: scale(1.50);
+  }
+  
+
