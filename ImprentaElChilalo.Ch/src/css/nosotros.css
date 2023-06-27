@@ -140,7 +140,28 @@ body{
     margin-top: 80px;
 }
 
-/*Data*/
+/* Estilos para la sección Acerca de Nosotros */
+.info {
+    width: 50%;
+    float: left;
+    padding-right: 20px;
+    color: #fff;
+}
+
+/* Estilos para el mapa */
+.mapa {
+    width: 50%;
+    float: right;
+    height: 400px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
 #nosotros .contenedor{
     display: flex;
     justify-content: space-evenly;
@@ -152,7 +173,7 @@ body{
     text-align: center;
     padding: 20px 12px;
     margin-top: 0;
-    font-size: 4em;
+    font-size: 2.8em;
 }
 
 #nosotros .p{
@@ -162,11 +183,11 @@ body{
 #nosotros .texto p{
     font-size: 1.5em;
 }
-#nosotros .texto address{
+/*#nosotros .texto address{
     font-size: 1.5em;
 }
 
-#nosotros .texto{
+/*#nosotros .texto{
     width: 50%;
     max-width: 600px;
     text-align: initial;
@@ -174,16 +195,23 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     color: #fff;
-}
+}*/
 
-#nosotros .img-contenedor{
+/*#nosotros .img-contenedor{
     background-size: cover;
     background-position: center center;
     height: 500px;
     width: 400px; 
 }
+
+/*#map {
+  position: fixed; /* Posición fija para que el mapa se mantenga en una ubicación específica en la página */
+  /*top: 20px; /* Distancia desde la parte superior */
+  /*left: 20px; /* Distancia desde la izquierda */
+  /*-width: 300px; /* Ancho del mapa */
+  /*-height: 300px; /* Altura del mapa */
+/*}*/
 
 footer {
     background: linear-gradient(to right, #ff8a00, #e52e71);
@@ -205,6 +233,7 @@ footer {
   
   .social-icons {
     text-align: center;
+    margin-left: 50px
   }
   
   .social-icon {
@@ -219,8 +248,9 @@ footer {
   }
   
   .logo img {
-    max-width: 100px;
+    max-width: 120px;
     height: auto;
+    margin: 0 auto;
   }
   
   .text {
