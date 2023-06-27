@@ -336,7 +336,7 @@ footer {
   .social-icon {
     color: #fff;
     font-size: 24px;
-    margin: 0 10px;
+    margin: 30 10px;
   }
   
   .social-icon:not(:last-child)::after {

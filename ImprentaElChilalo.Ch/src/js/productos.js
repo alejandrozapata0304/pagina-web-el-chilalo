@@ -76,16 +76,3 @@ window.onbeforeunload = function () {
 }
 
 //Efectos de fade-in y fade-in-left
-
-window.addEventListener('scroll', function() {
-  var footer = document.querySelector('footer');
-  var footerHeight = footer.offsetHeight;
-  var windowHeight = window.innerHeight;
-  var scrollPosition = window.scrollY || window.pageYOffset;
-  
-  if (scrollPosition + windowHeight >= document.body.offsetHeight - footerHeight) {
-    footer.classList.remove('sticky');
-  } else {
-    footer.classList.add('sticky');
-  }
-});
