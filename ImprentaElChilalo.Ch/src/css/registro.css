@@ -14,8 +14,6 @@ body{
     height: 100vh;
     width: 100%;
     background: #000;
-
-  
 }
 .background{
     background: url(../media/fondo1.0.jpg) no-repeat;
@@ -269,7 +267,6 @@ body{
     background: #f72d7a;
     font-size: 16px;
     color: #fff;
-    style: antiquewhite;
 
 }
 .create-account{
