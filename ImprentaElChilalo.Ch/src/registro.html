@@ -1,0 +1,126 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="css/registro.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--Fuente Google Fairplay-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!--Icono del navegador-->
+    <link rel="shortcut icon" href="media/Icono.png" />
+  </head>
+  <body>
+    <!-- NAVBAR CREATION -->
+    <header class="header">
+      <div class="navbar">
+        
+          <img
+            src="media/Logo con letra blanca.png"
+            class="logo fade-in"
+            onclick="window.location.href='index.html'"
+            alt="logo"
+          /><ul>
+          <li><a href="index.html" class="fade-in"> Inicio</a></li>
+          <li><a href="productos.html" class="fade-in">Productos</a></li>
+          <li><a href="servicios.html" class="fade-in">Servicios</a></li>
+          <li><a href="nosotros.html" class="fade-in">Acerca de Nosotros</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- LOGIN FORM CREATION -->
+    <div class="background"></div>
+    <div class="container">
+      <div class="item">
+        <h2 class="logo"><p><i class="bx bxs-printer"></i>El Chilalo</p></h2>
+        <div class="text-item">
+          <h2>Bienvenido! <br /><span> Disfruta de la web! </span></h2>
+          <p>
+           Nos encantaria que fueras parte de nuestra familia.
+          </p>
+          <div class="social-icon">
+            <a href="https://web.facebook.com/profile.php?id=100094266394691" class="social-icon"><i class="fab fa-facebook-f"><i class="bx bxl-facebook"></i></a>
+            <a href=""><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/imprentaelchilalo/"><i class="bx bxl-instagram"></i></a>
+            <a href="https://wa.me/+51900231897?text=Quiero%20hacer%20una%20consulta%20con%20la%20grafica"><i class="bx bxl-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="login-section">
+        <div class="form-box login">
+          <form action="">
+            <h2>Ingresar</h2>
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-envelope"></i></span>
+              <input type="email" required />
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+              <input type="password" required />
+              <label>Clave</label>
+            </div>
+            <div class="remember-password">
+              <label for=""><input type="checkbox" />Recuerda</label>
+              <a href="#">Olvidaste tu clave</a>
+            </div>
+            <button class="btn">Ingreso</button>
+            <div class="create-account">
+              <p>
+                Crear una cuenta nueva?
+                <a href="#" class="register-link">Ingreso</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="form-box register">
+          <form action="">
+            <h2>Ingreso</h2>
+
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-user"></i></span>
+              <input type="text" required />
+              <label>Nombre de Usuario</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-envelope"></i></span>
+              <input type="email" required />
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+              <input type="password" required />
+              <label>Clave</label>
+            </div>
+            <div class="remember-password">
+              <label for=""
+                ><input type="checkbox" />Estoy de acuerdo con los terminos y
+                condiciones</label
+              >
+            </div>
+            <button class="btn">Ingreso</button>
+            <div class="create-account">
+              <p>
+                Tienes una cuenta? <a href="#" class="login-link">Ingresa</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- SIGN UP FORM CREATION -->
+
+    <script src="index.js"></script>
+  </body>
+</html>

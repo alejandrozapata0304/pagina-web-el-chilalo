@@ -154,7 +154,7 @@ button:hover {
 .navbar ul li:hover::after{
     width: 100%;
 }
-
+/*Footer*/
 footer {
     background: linear-gradient(to right, #ff8a00, #e52e71);
     color: #fff;

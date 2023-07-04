@@ -183,44 +183,12 @@ body{
 #nosotros .texto p{
     font-size: 1.5em;
 }
-/*#nosotros .texto address{
-    font-size: 1.5em;
-}
 
-/*#nosotros .texto{
-    width: 50%;
-    max-width: 600px;
-    text-align: initial;
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
-}*/
-
-/*#nosotros .img-contenedor{
-    background-size: cover;
-    background-position: center center;
-    height: 500px;
-    width: 400px; 
-}
-
-/*#map {
-  position: fixed; /* Posición fija para que el mapa se mantenga en una ubicación específica en la página */
-  /*top: 20px; /* Distancia desde la parte superior */
-  /*left: 20px; /* Distancia desde la izquierda */
-  /*-width: 300px; /* Ancho del mapa */
-  /*-height: 300px; /* Altura del mapa */
-/*}*/
-
+/*Footer*/
 footer {
     background: linear-gradient(to right, #ff8a00, #e52e71);
     color: #fff;
     padding: 20px 0;
-    /*position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;*/
   }
   
   .container {
@@ -233,13 +201,12 @@ footer {
   
   .social-icons {
     text-align: center;
-    margin-left: 50px
   }
   
   .social-icon {
     color: #fff;
     font-size: 24px;
-    margin: 30 10px;
+    margin: 0 10px;
   }
   
   .social-icon:not(:last-child)::after {
@@ -248,9 +215,8 @@ footer {
   }
   
   .logo img {
-    max-width: 120px;
+    max-width: 100px;
     height: auto;
-    margin: 0 auto;
   }
   
   .text {
@@ -272,3 +238,4 @@ footer {
   .social-icons:hover {
     transform: scale(1.50);
   }
+  
