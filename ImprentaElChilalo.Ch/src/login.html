@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Inicio de Sesión</title>
-    <link rel="stylesheet" href="css/registro.css" />
+    <link rel="stylesheet" href="css/login.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -59,7 +59,7 @@
       </div>
       <div class="login-section">
         <div class="form-box login">
-          <form action="">
+          <form action="inicio_sesion.php" method="POST"">
             <h2>Ingresar</h2>
             <div class="input-box">
               <span class="icon"><i class="bx bxs-envelope"></i></span>
@@ -85,22 +85,22 @@
           </form>
         </div>
         <div class="form-box register">
-          <form action="">
+          <form action="registro_usuarios.php"method="POST">
             <h2>Ingreso</h2>
 
             <div class="input-box">
               <span class="icon"><i class="bx bxs-user"></i></span>
-              <input type="text" required />
+              <input type="text" id="nombre" required />
               <label>Nombre de Usuario</label>
             </div>
             <div class="input-box">
               <span class="icon"><i class="bx bxs-envelope"></i></span>
-              <input type="email" required />
+              <input type="email" id="gmail" required />
               <label>Email</label>
             </div>
             <div class="input-box">
               <span class="icon"><i class="bx bxs-lock-alt"></i></span>
-              <input type="password" required />
+              <input type="password" id="contrasena" required />
               <label>Clave</label>
             </div>
             <div class="remember-password">
@@ -109,7 +109,7 @@
                 condiciones</label
               >
             </div>
-            <button class="btn">Ingreso</button>
+            <button type="button" class="btn" onclick="registrarUsuario()">Registrar</button>
             <div class="create-account">
               <p>
                 Tienes una cuenta? <a href="#" class="login-link">Ingresa</a>
@@ -120,7 +120,6 @@
       </div>
     </div>
     <!-- SIGN UP FORM CREATION -->
-
-    <script src="index.js"></script>
+    <script src="js/registro.js"></script>
   </body>
 </html>
