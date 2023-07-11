@@ -57,50 +57,52 @@
           </div>
         </div>
       </div>
+
       <div class="login-section">
         <div class="form-box login">
-          <form action="inicio_sesion.php" method="POST"">
+          <form action="inicio_sesion.php" method="POST">
             <h2>Ingresar</h2>
             <div class="input-box">
               <span class="icon"><i class="bx bxs-envelope"></i></span>
-              <input type="email" required />
+              <input id="email" name="email" type="email" required />
               <label>Email</label>
             </div>
             <div class="input-box">
               <span class="icon"><i class="bx bxs-lock-alt"></i></span>
-              <input type="password" required />
+              <input id="contrasena" name="contrasena" type="password" required />
               <label>Clave</label>
             </div>
             <div class="remember-password">
               <label for=""><input type="checkbox" />Recuerda</label>
               <a href="#">Olvidaste tu clave</a>
             </div>
-            <button class="btn">Ingreso</button>
+            <input type="submit" value="Iniciar sesión">
             <div class="create-account">
               <p>
                 Crear una cuenta nueva?
-                <a href="#" class="register-link">Ingreso</a>
+                <a href="#" class="register-link">Registrarme</a>
               </p>
             </div>
           </form>
         </div>
+        
         <div class="form-box register">
           <form action="registro_usuarios.php"method="POST">
             <h2>Ingreso</h2>
 
             <div class="input-box">
               <span class="icon"><i class="bx bxs-user"></i></span>
-              <input type="text" id="nombre" required />
+              <input id="nombre" name="nombre" type="text"  required />
               <label>Nombre de Usuario</label>
             </div>
             <div class="input-box">
               <span class="icon"><i class="bx bxs-envelope"></i></span>
-              <input type="email" id="gmail" required />
+              <input id="email" name="email" type="email"  required />
               <label>Email</label>
             </div>
             <div class="input-box">
               <span class="icon"><i class="bx bxs-lock-alt"></i></span>
-              <input type="password" id="contrasena" required />
+              <input id="contrasena" name="contrasena" type="password" required />
               <label>Clave</label>
             </div>
             <div class="remember-password">
@@ -109,7 +111,7 @@
                 condiciones</label
               >
             </div>
-            <button type="button" class="btn" onclick="registrarUsuario()">Registrar</button>
+            <input type="submit" value="Registrar">
             <div class="create-account">
               <p>
                 Tienes una cuenta? <a href="#" class="login-link">Ingresa</a>
@@ -123,3 +125,4 @@
     <script src="js/registro.js"></script>
   </body>
 </html>
+X

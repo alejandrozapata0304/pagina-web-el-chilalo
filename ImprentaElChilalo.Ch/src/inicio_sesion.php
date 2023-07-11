@@ -1,28 +1,52 @@
 <?php
-require_once "conexion.php";
-// Verificar si se ha enviado el formulario de inicio de sesión
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtener los datos enviados desde el formulario
-    $usuario = $_POST['usuario'];
-    $contraseña = $_POST['contraseña'];
+session_start();
 
-    // Realizar la consulta en la base de datos para verificar las credenciales
-    $sql = "SELECT * FROM usuarios WHERE Nombre = '$usuario' AND Contraseña = '$contraseña'";
-    $resultado = mysqli_query($conexion, $sql);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtener los datos del formulario
+    $email = $_POST['email'];
+    $contrasena = $_POST['contrasena'];
 
-    // Verificar si se encontró un registro que coincida con las credenciales
-    if (mysqli_num_rows($resultado) === 1) {
-        // Inicio de sesión exitoso
-        // Puedes redirigir al usuario a la página de inicio o a otra sección de tu aplicación
-        header('Location: ruta_de_redireccionamiento.php');
-        exit();
-    } else {
-        // Credenciales incorrectas
-        echo "Usuario y/o contraseña incorrectos";
+    // Configuración de la conexión a la base de datos
+    $servername = "localhost";
+    $username = "root";
+    $password = "admin";
+    $dbname = "imprenta_chilalo";
+
+    // Crear la conexión
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Verificar la conexión
+    if ($conn->connect_error) {
+        die("La conexión falló: " . $conn->connect_error);
     }
 
-    // Liberar el resultado y cerrar la conexión a la base de datos
-    mysqli_free_result($resultado);
-    mysqli_close($conexion);
+    // Preparar la consulta SQL utilizando una sentencia preparada
+    $sql = "SELECT id, nombre, contrasena FROM usuarios WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows == 1) {
+        // El usuario existe en la base de datos
+        $row = $result->fetch_assoc();
+        if (password_verify($contrasena, $row['contrasena'])) {
+            // La contraseña es correcta, iniciar sesión
+            $_SESSION['id'] = $row['id'];
+            $_SESSION['nombre'] = $row['nombre'];
+
+            // Redirigir a la página de inicio después del inicio de sesión exitoso
+            header("Location: index.html");
+            exit();
+        } else {
+            echo "Contraseña incorrecta.";
+        }
+    } else {
+        echo "Usuario no encontrado.";
+    }
+
+    // Cerrar la conexión
+    $stmt->close();
+    $conn->close();
 }
 ?>

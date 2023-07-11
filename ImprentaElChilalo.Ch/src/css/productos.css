@@ -274,43 +274,7 @@ body{
     color: #FFF;
     background-color: #f14e32;
 }
-/*Seccion catálogo
-.container{
-    width: 100%;
-    background-color: #ffffff;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
 
-    align-items: center;
-}
-
-.caja{
-    width: 60px;
-    height: 60px;
-    border: solid 1px black;
-    margin: 20px;
-}
-
-.caja1{
-    background-color: rgb(224, 116, 21);
-}
-.caja2{
-    background-color: rgb(224, 116, 21);
-}
-.caja3{
-    background-color: rgb(224, 116, 21);
-}
-.caja4{
-    background-color: rgb(224, 116, 21);
-}
-.caja5{
-    background-color: rgb(224, 116, 21);
-}
-.caja6{
-    background-color: rgb(224, 116, 21);
-}
-*/
 footer {
     background: linear-gradient(to right, #ff8a00, #e52e71);
     color: #fff;

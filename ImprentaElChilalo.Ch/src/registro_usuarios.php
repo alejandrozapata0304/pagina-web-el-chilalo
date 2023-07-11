@@ -1,27 +1,55 @@
-<?php
-require_once "conexion.php";
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro Exitoso</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<?php 
 
-// Verificar si se ha enviado el formulario de registro
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtener los datos enviados desde el formulario
-    $nombre = $_POST['nombre'];
-    $gmail = $_POST['gmail'];
-    $contrasena = $_POST['contrasena'];
+// Obtener los datos del formulario de registro
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+$contrasena = $_POST['contrasena'];
 
-    // Realizar la consulta en la base de datos para insertar los datos del nuevo usuario
-    $sql = "INSERT INTO usuarios (Nombre, Gmail, Contraseña) VALUES ('$nombre', '$gmail', '$contrasena')";
-    
-    // Ejecutar la consulta
-    if (mysqli_query($conexion, $sql)) {
-        // Registro exitoso
-        echo "Registro exitoso";
-    } else {
-        // Error en el registro
-        echo "Error en el registro: " . mysqli_error($conexion);
-    }
+// Cifrar la contraseña utilizando password_hash()
+$contrasena_cifrada = password_hash($contrasena, PASSWORD_DEFAULT);
 
-    // Cerrar la conexión a la base de datos
-    mysqli_close($conexion);
+// Validar los datos (puedes agregar más validaciones según tus requisitos)
+
+// Conectar a la base de datos (asegúrate de reemplazar los valores de conexión con los tuyos)
+$servername = "localhost";
+$username = "root";
+$password = "admin";
+$dbname = "imprenta_chilalo";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("La conexión falló: " . $conn->connect_error);
 }
-?>
 
+// Verificar si el email ya está registrado
+$sql = "SELECT * FROM usuarios WHERE email = '$email'";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    echo "El email ya está registrado.";
+    exit;
+}
+
+// Insertar el nuevo usuario en la base de datos
+$sql = "INSERT INTO usuarios (nombre, email, contrasena) VALUES ('$nombre', '$email', '$contrasena_cifrada')";
+if ($conn->query($sql) === TRUE) {
+
+    echo "<div id='mensaje' style='background-color: black; margin-top: 80px; color: white; padding: 20px; text-align: center; font-size: 35px; font-family: Rubik, sans-serif;'>Registro exitoso. Serás redirigido en unos segundos...</div>";
+    echo "<img src='media/registro_exitoso.png' alt='Imagen' style='display: block; margin: 0 auto;'>";
+    echo "<script>setTimeout(function() { window.location.href = 'login.html'; }, 5000);</script>";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
